@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#262626"
+    tools:context=".MakeActivity">
+
+    <RelativeLayout
+        android:id="@+id/container_selectWord"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_selectWord_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:text="아래의 단어 중에서 하나를 선택해주세요"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:id="@+id/text_selectWord_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_selectWord_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="48dp"
+            android:columnCount="5"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/text_adventure"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="모험"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_health"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="건강"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_hope"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="희망"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_marry"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="결혼"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_love"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="사랑"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_promise"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="약속"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_travel"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="여행"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_exit"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="일탈"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_success"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="성공"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_family"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="가족"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_friend"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="친구"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_study"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="공부"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_challenge"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="도전"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_happy"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="행복"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_rest"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="휴식"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/text_select_temp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_selectWord_container"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="20sp"
+            android:textColor="@color/highlight"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/container_selectColor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/text_selectColor_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="48dp"
+            android:layout_marginBottom="24dp"
+            android:text="아래의 색깔 중에서 하나를 선택해주세요"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <GridLayout
+            android:id="@+id/text_selectColor_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_selectColor_header"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="48dp"
+            android:columnCount="4"
+            android:rowCount="3"
+            android:useDefaultMargins="true">
+
+            <TextView
+                android:id="@+id/text_colorSun"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="태양"
+                android:textColor="#FF4444"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorSea"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="바다"
+                android:textColor="#6666FF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorGreen"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="초원"
+                android:textColor="#66FF66"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorYellow"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="나비"
+                android:textColor="#FFFF44"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorOrange"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="감귤"
+                android:textColor="#FF7777"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorPurple"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="보라"
+                android:textColor="#EE44EE"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorLightgreen"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="연두"
+                android:textColor="#CCFF99"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorSky"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="하늘"
+                android:textColor="#CCFFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorPink"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="분홍"
+                android:textColor="#FF9999"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorMint"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="민트"
+                android:textColor="#66FFFF"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorChoco"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="초코"
+                android:textColor="#CC6633"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/text_colorWhite"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="순백"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </GridLayout>
+
+        <TextView
+            android:id="@+id/text_select_temp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/text_selectColor_container"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</LinearLayout>
