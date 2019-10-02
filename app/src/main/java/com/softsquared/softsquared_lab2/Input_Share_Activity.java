@@ -1,7 +1,5 @@
 package com.softsquared.softsquared_lab2;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -18,7 +16,6 @@ import com.kakao.message.template.ButtonObject;
 import com.kakao.message.template.ContentObject;
 import com.kakao.message.template.FeedTemplate;
 import com.kakao.message.template.LinkObject;
-import com.kakao.message.template.SocialObject;
 import com.kakao.network.ErrorResult;
 import com.kakao.network.callback.ResponseCallback;
 
@@ -180,8 +177,10 @@ public class Input_Share_Activity extends AppCompatActivity {
             public void onFailure(ErrorResult errorResult) {
                 Log.e("Error", errorResult.toString());
             }
+
             @Override
-            public void onSuccess(KakaoLinkResponse result) { }
+            public void onSuccess(KakaoLinkResponse result) {
+            }
         });
     }
 }
