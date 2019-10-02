@@ -3,14 +3,19 @@ package com.softsquared.softsquared_lab2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+
+import com.bumptech.glide.Glide;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button button;
+    private ImageView background;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         /* findViewById */
         button = findViewById(R.id.button);
+        background = findViewById(R.id.background);
+
 
         /* 버튼 클릭 이벤트 */
         button.setOnClickListener(new View.OnClickListener() {
@@ -41,6 +48,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         Log.i("MainState", "OnStart");
+
+        /* 배경화면 애니메이션 시작 */
+        Glide.with(this).asGif().load(R.raw.background_gif).into(background);
     }
 
     @Override
@@ -50,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
         /* 두 번 클릭 방지 해제 */
         button.setEnabled(true);
+
+
     }
 
     @Override
@@ -63,20 +75,23 @@ public class MainActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         Log.i("MainState", "OnPause");
+
+
     }
 
     @Override
     protected void onStop() {
         super.onStop();
         Log.i("MainState", "OnStop");
+
+        /* 배경화면 애니메이션 해제 */
+        background.setBackgroundResource(R.drawable.initial_background);
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
         Log.i("MainState", "OnDestroy");
-        // Destroy를 하면 광고를 띄워보자.
     }
-
 
 }

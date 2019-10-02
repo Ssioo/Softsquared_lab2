@@ -2,6 +2,7 @@ package com.softsquared.softsquared_lab2;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class MakeActivity extends AppCompatActivity {
+
+    public static Activity Activity_make;
 
     private ArrayList<TextView> tv_Words = new ArrayList<>();
     private ArrayList<TextView> tv_Colors = new ArrayList<>();
@@ -29,6 +32,9 @@ public class MakeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_make_fireworks);
 
         Log.i("MakeState", "OnCreate");
+
+        /* 이 액티비티를 static으로 선언 */
+        Activity_make = MakeActivity.this;
 
         /* findViewById */
         tv_Words.add((TextView) findViewById(R.id.text_adventure));
@@ -149,8 +155,10 @@ public class MakeActivity extends AppCompatActivity {
         /* 액티비티를 벗어났다가 오면 선택내용 초기화 */
         isSelect_Word = false;
         isSelect_Color = false;
-        tv_Word_Selected.setTextColor(getResources().getColor(R.color.white));
-        tv_Color_Selected.setTypeface(Typeface.DEFAULT, Typeface.NORMAL);
+        if (tv_Word_Selected != null)
+            tv_Word_Selected.setTextColor(getResources().getColor(R.color.white));
+        if (tv_Color_Selected != null)
+            tv_Color_Selected.setTypeface(Typeface.DEFAULT, Typeface.NORMAL);
 
         tv_selectedColor_temp.setText("");
         tv_selectedWord_temp.setText("");

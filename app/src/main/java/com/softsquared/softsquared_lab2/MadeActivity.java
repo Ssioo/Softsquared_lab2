@@ -1,5 +1,6 @@
 package com.softsquared.softsquared_lab2;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -13,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MadeActivity extends AppCompatActivity {
 
+    public static Activity Activity_made;
+
     private Button btn_submit_event;
     private TextView tv_selectedWord;
     private TextView tv_description;
@@ -22,6 +25,9 @@ public class MadeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_made_fireworks);
         Log.i("MadeState", "OnCreate");
+
+        /* 이 액티비티를 static으로 선언 */
+        Activity_made = MadeActivity.this;
 
         /* findViewByID */
         btn_submit_event = findViewById(R.id.btn_submit_event);
@@ -34,6 +40,15 @@ public class MadeActivity extends AppCompatActivity {
         tv_selectedWord.setTextColor(Color.parseColor("#" + intent.getStringExtra("Color")));
         tv_description.setTextColor(Color.parseColor("#" + intent.getStringExtra("Color")));
 
+
+        /* 사용자 버튼 클릭 이벤트 */
+        btn_submit_event.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent newintent = new Intent(MadeActivity.this, Input_Share_Activity.class);
+                startActivity(newintent);
+            }
+        });
     }
 
     @Override
@@ -47,14 +62,6 @@ public class MadeActivity extends AppCompatActivity {
         super.onResume();
         Log.i("MadeState", "OnResume");
 
-        /* 사용자 버튼 클릭 이벤트 */
-        btn_submit_event.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent newintent = new Intent(MadeActivity.this, Input_Share_Activity.class);
-                startActivity(newintent);
-            }
-        });
     }
 
     @Override

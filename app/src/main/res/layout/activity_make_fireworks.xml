@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/initial_background"
     android:orientation="vertical"
-    android:background="#262626"
     tools:context=".MakeActivity">
 
     <RelativeLayout
@@ -163,8 +163,8 @@
             android:layout_below="@+id/text_selectWord_container"
             android:layout_centerHorizontal="true"
             android:text=""
-            android:textSize="20sp"
-            android:textColor="@color/highlight"/>
+            android:textColor="@color/highlight"
+            android:textSize="20sp" />
     </RelativeLayout>
 
     <RelativeLayout

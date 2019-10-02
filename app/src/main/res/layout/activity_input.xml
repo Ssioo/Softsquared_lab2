@@ -171,6 +171,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_marginEnd="4dp"
+                android:checkedButton="@id/radio_disagree"
                 android:orientation="horizontal">
 
                 <RadioButton
@@ -184,6 +185,7 @@
                     android:id="@+id/radio_disagree"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:checked="false"
                     android:text="미동의"
                     android:textSize="12sp" />
             </RadioGroup>

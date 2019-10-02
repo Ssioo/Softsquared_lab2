@@ -7,6 +7,13 @@
     android:background="#262626"
     tools:context=".MainActivity">
 
+    <ImageView
+        android:id="@+id/background"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/initial_background" />
+
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
