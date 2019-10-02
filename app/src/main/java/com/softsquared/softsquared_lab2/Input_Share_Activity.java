@@ -27,6 +27,8 @@ import java.util.Map;
 
 public class Input_Share_Activity extends AppCompatActivity {
 
+    /* OnCreate, OnResume, OnRestart, OnDestroy 활용 */
+
     private boolean shared = false;
     private boolean notToasted = true;
 

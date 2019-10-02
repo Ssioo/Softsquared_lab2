@@ -14,6 +14,8 @@ import java.util.ArrayList;
 
 public class MakeActivity extends AppCompatActivity {
 
+    /* OnCreate, OnResume, OnPause 활용 */
+
     public static Activity Activity_make;
 
     private ArrayList<TextView> tv_Words = new ArrayList<>();

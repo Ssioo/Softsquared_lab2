@@ -14,6 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MadeActivity extends AppCompatActivity {
 
+    /* OnCreate 활용 */
+
     public static Activity Activity_made;
 
     private Button btn_submit_event;
